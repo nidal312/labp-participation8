@@ -16,9 +16,7 @@ public class CityList {
      * This is a candidate city to add
      */
     public void add(City city) {
-        if (cities.contains(city)) {
-            throw new IllegalArgumentException();
-        }
+        if (!cities.contains(city)) {
         cities.add(city);
     }
 
