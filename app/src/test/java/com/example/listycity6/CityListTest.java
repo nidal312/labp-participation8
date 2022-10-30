@@ -76,5 +76,13 @@ public class CityListTest {
         });
     }
 
+    @Test
+    void testhasCity(){
+        CityList cityList = mockCityList();
+        City city = new City("Calgary","Alberta");
+        cityList.add(city);
+        assertEquals(true,cityList.hasCity(city));
+    }
+
 
 }

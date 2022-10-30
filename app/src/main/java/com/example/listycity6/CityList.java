@@ -50,5 +50,15 @@ public class CityList {
         return list;
     }
 
+    /**
+     * This method returns true if a city is contained in the ArrayList cities
+     * @param city
+     * @return Returns true if city is contianed in the list
+     */
+    public boolean hasCity(City city){
+        return false;
+    }
+
+
 }
 
