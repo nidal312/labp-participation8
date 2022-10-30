@@ -31,6 +31,10 @@ public class CityList {
      * This is a candidate city to delete
      */
     public void delete(City city){
+        if(!cities.contains(city)){
+            throw new IllegalArgumentException();
+        }
+        cities.remove(city);
     }
 
 
