@@ -91,10 +91,10 @@ public class CityListTest {
         cityList.add(city);
         City city2 = new City("Vancouver","British Columbia");
         cityList.add(city2);
-        assertEquals(3, cityList.getCities().size());
+        assertEquals(3, cityList.countCities());
         City city3 = new City("Toronto","Ontario");
         cityList.add(city3);
-        assertEquals(4, cityList.getCities().size());
+        assertEquals(4, cityList.countCities());
     }
 
 
