@@ -62,6 +62,15 @@ public class CityList {
         return false;
     }
 
+    /**
+     * This counts the number of cities in the list
+     * @param city
+     * @return the number of cities
+     */
+    public int countCities(City city){
+        return 0;
+    }
+
 
 }
 

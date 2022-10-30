@@ -84,5 +84,18 @@ public class CityListTest {
         assertEquals(true,cityList.hasCity(city));
     }
 
+    @Test
+    void testCount(){
+        CityList cityList = mockCityList();
+        City city = new City("Dubai","UAE");
+        cityList.add(city);
+        City city2 = new City("Vancouver","British Columbia");
+        cityList.add(city2);
+        assertEquals(3, cityList.getCities().size());
+        City city3 = new City("Toronto","Ontario");
+        cityList.add(city3);
+        assertEquals(4, cityList.getCities().size());
+    }
+
 
 }
