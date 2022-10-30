@@ -39,4 +39,17 @@ public class CityListTest {
                 ()-> assertEquals(2, cityList.getCities().size()),
                 ()-> assertTrue(cityList.getCities().contains(city)));
     }
+
+
+    @Test
+    void testAddException() {
+        assertTimeout(ofMinutes(12),()->{
+            CityList cityList = mockCityList();
+            City city = new City("Yellowknife", "Northwest Territories");
+            cityList.add(city);
+            assertThrows( IllegalArgumentException.class, () -> {
+                cityList.add(city); });
+
+        });
+    }
 }
