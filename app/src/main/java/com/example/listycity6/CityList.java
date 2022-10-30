@@ -17,7 +17,8 @@ public class CityList {
      */
     public void add(City city) {
         if (!cities.contains(city)) {
-        cities.add(city);
+            cities.add(city);
+        }
     }
 
     /**
