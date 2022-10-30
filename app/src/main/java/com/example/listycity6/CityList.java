@@ -56,6 +56,9 @@ public class CityList {
      * @return Returns true if city is contianed in the list
      */
     public boolean hasCity(City city){
+        if(cities.contains(city)){
+            return true;
+        }
         return false;
     }
 
