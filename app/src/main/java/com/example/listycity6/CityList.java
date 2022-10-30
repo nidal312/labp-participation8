@@ -26,6 +26,16 @@ public class CityList {
     }
 
     /**
+     * This deletes a city to the list if the city exists in the list
+     * @param city
+     * This is a candidate city to delete
+     */
+    public void delete(City city){
+    }
+
+
+
+    /**
      * This returns a sorted list of cities
      * @return
      * Return the sorted list

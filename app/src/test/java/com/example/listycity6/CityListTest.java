@@ -52,4 +52,30 @@ public class CityListTest {
 
         });
     }
+
+    @Test
+    void testDelete(){
+        CityList cityList = mockCityList();
+        City city = new City("Regina", "Saskatchewan");
+        cityList.add(city);
+        cityList.delete(city);
+        assertAll("Testing deletion of city",
+                ()-> assertEquals(1,cityList.getCities().size()),
+                ()-> assertFalse(cityList.getCities().contains(city)));
+
+    }
+
+    @Test
+    void testDeleteException() {
+        assertTimeout(ofMinutes(12),()->{
+            CityList cityList = mockCityList();
+            City city = new City("Yellowknife", "Northwest Territories");
+            cityList.add(city);
+            assertThrows( IllegalArgumentException.class, () -> {
+                cityList.delete(city); });
+
+        });
+    }
+
+
 }
