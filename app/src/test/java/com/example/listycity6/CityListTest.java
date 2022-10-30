@@ -18,5 +18,25 @@ import org.junit.jupiter.api.condition.EnabledIf;
 
 
 public class CityListTest {
+    private CityList cityList = new CityList();
+    private CityList mockCityList() {
+        CityList cityList = new CityList();
+        cityList.add(mockCity());
+        return cityList;
+    }
+    private City mockCity() {
+        return new City("Edmonton", "Alberta");
+    }
 
+    @Test
+    @DisplayName("Testing add fucntion of CityList class")
+    void testAdd() {
+        CityList cityList = mockCityList();
+        assertEquals(1, cityList.getCities().size());
+        City city = new City("Regina", "Saskatchewan");
+        cityList.add(city);
+        assertAll("Testing addition of second city",
+                ()-> assertEquals(2, cityList.getCities().size()),
+                ()-> assertTrue(cityList.getCities().contains(city)));
+    }
 }
