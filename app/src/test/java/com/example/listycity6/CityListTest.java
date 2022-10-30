@@ -70,7 +70,6 @@ public class CityListTest {
         assertTimeout(ofMinutes(12),()->{
             CityList cityList = mockCityList();
             City city = new City("Yellowknife", "Northwest Territories");
-            cityList.add(city);
             assertThrows( IllegalArgumentException.class, () -> {
                 cityList.delete(city); });
 
